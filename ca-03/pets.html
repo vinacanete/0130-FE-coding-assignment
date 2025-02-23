@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pet Angels | Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/petangelrescue-logo.svg" alt="Bootstrap" width="200" class="me-2">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="pets.html">Available Pets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="adopt.html">Adopt</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Volunteer
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">About the Team</a></li>
+                      <li><a class="dropdown-item" href="#">How to Help</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid bg-secondary p-5">
+            <div class="row">
+                    <h2>Pets for adoption</h2>
+                    <p>These cuties are ready for their furever home. Stop by for a meet and greet!</p>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div class="card col-lg-3 p-4">
+                    <img src="images/1-gary.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Gary</h5>
+                    <p class="card-text">Gary is a cat. He is adorable and enjoys bird watching. He will bring you presents you may not appreciate but he just loves you.</p>
+                    <a href="adopt.html" class="btn btn-primary">Adopt</a>
+                    </div>
+                </div>
+            <div class="card col-lg-3 p-4">
+                <img src="images/2-wiggles.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Wiggles</h5>
+                <p class="card-text">Wiggles is a ferret. He likes to collect your items and hide it where you can never find them. He's super smart and silly.</p>
+                <a href="adopt.html" class="btn btn-primary">Adopt</a>
+                </div>
+             </div>
+            <div class="card col-lg-3 p-4">
+                <img src="images/3-bubbles.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Bubbles</h5>
+                <p class="card-text">Bubbles is a Staffordshire Bull Terrier. She looks like a great guard dog but is actually too playful, sweet and cuddly to intruders.</p>
+                <a href="adopt.html" class="btn btn-primary">Adopt</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center bg-primary p-3 text-white">
+        &copy; 2025 Pet Angels
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+</body>
+</html>
