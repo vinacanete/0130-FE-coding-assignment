@@ -6,7 +6,6 @@
 // You do NOT need update, but you can add it if you'd like
 // Use Bootstrap and/or CSS to style your project
 
-const bookContainer = document.getElementById("book-container");
 let bookData = [];
 
 async function fetchBooks() {
