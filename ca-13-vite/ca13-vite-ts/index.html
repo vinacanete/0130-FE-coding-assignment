@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Week 13 Coding Assignment Vite TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- intro copy -->
+    <header class="container mt-3">
+      <h1>Reading Goal Tracker</h1>
+      <p>My goal is to read 24 books in a year. Here are the books I've read so far with my ratings.</p>
+      </header>
+  
+      <!-- input form field -->
+      <form class="container mb-3">
+          <div>
+              <label for="bookTitle" class="form-label">Book Title:</label>
+              <input type="text" class="form-control" id="bookTitle" name="bookTitle">
+          </div>
+          <div>
+              <label for="bookAuthor" class="form-label">Author Name:</label>
+              <input type="text" class="form-control" id="bookAuthor" name="bookAuthor">
+          </div>
+          <div>
+              <label for="bookReview" class="form-label">Review:</label>
+              <input type="text" class="form-control" id="bookReview" name="bookReview">
+          </div>
+          <div>
+              <label for="bookRating" class="form-label">Rating:</label>
+              <input type="text" class="form-control" id="bookRating" name="bookRating">
+          </div>
+          <div class="mt-3">
+              <!-- <button type="submit" class="btn btn-primary" id="formSubmit">Add Book</button> -->
+              <button class="btn btn-primary" id="formSubmit">Add Book</button>
+  
+          </div>
+      </form>
+  
+  <!-- table with 4 sample entries -->
+      <table class="table table-striped">
+          <thead id="thead">
+              <tr class="table-primary">
+                  <th scope="col">#</th>
+                  <th>Book Title</th>
+                  <th>Author Name</th>
+                  <th>Review</th>
+                  <th>Rating</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+      </table>
+
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
