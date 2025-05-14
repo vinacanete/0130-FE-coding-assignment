@@ -1,0 +1,164 @@
+{
+    "accounts": [
+        {"id": "1", 
+         "user_id": "1",
+         "type": "checking", 
+         "balance": 200 
+        },
+        {"id": "2", 
+         "user_id": "1",
+         "type": "savings", 
+         "balance": 500 
+        }
+    ],
+    "transactions": [
+        {"id": "1", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "1",
+         "category_name": "income",
+         "type": "credit",
+         "description": "Paycheck", 
+         "amount": 5000
+        },
+        {"id": "2", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "2",
+         "category_name": "housing",
+         "type": "debit",
+         "description": "House mortgage payment", 
+         "amount": 1500
+        },
+        {"id": "3", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "1",
+         "category_name": "income",
+         "type": "credit",
+         "description": "Side job", 
+         "amount": 3000
+        },
+        {"id": "4", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "8",
+         "category_name": "transfer",
+         "type": "debit",
+         "description": "April Savings", 
+         "amount": 100
+        },
+        {"id": "5", 
+         "account_id": "2",
+         "account_type": "savings",
+         "category_id": "8",
+         "category_name": "transfer",
+         "type": "credit",
+         "description": "April Savings", 
+         "amount": 100
+        },
+        {"id": "6", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "4",
+         "category_name": "groceries",
+         "type": "debit",
+         "description": "Aldi", 
+         "amount": 200
+        },
+        {"id": "7", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "5",
+         "category_name": "transportation",
+         "type": "debit",
+         "description": "Parking", 
+         "amount": 20
+        },
+        {"id": "8", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "3",
+         "category_name": "utilities",
+         "type": "debit",
+         "description": "Electricity", 
+         "amount": 100
+        },
+        {"id": "9", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "3",
+         "category_name": "utilities",
+         "type": "debit",
+         "description": "Water", 
+         "amount": 50
+        },
+        {"id": "10", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "7",
+         "category_name": "entertainment",
+         "type": "debit",
+         "description": "Internet", 
+         "amount": 90
+        },
+        {"id": "11", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "5",
+         "category_name": "transportation",
+         "type": "debit",
+         "description": "Gas", 
+         "amount": 60
+        },
+        {"id": "12", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "7",
+         "category_name": "entertainment",
+         "type": "debit",
+         "description": "Subscriptions", 
+         "amount": 200
+        },
+        {"id": "13", 
+         "account_id": "1",
+         "account_type": "checking",
+         "category_id": "6",
+         "category_name": "dining out",
+         "type": "debit",
+         "description": "Red Lobster", 
+         "amount": 120
+        }
+    ],
+    "categories": [
+        {"id": "1", 
+         "name": "income"
+        },
+        {"id": "2", 
+         "name": "housing"
+        },
+        {"id": "3", 
+         "name": "utilities"
+        },
+        {"id": "4", 
+         "name": "groceries"
+        },
+        {"id": "5", 
+         "name": "transportation"
+        },
+        {"id": "6", 
+         "name": "dining out"
+        },
+        {"id": "7", 
+         "name": "entertainment"
+        },
+        {"id": "8", 
+        "name": "transfer"
+       }
+
+    ],
+    "user": {
+        "id":"1",
+        "name": "Daisy Germain"
+      }
+  }

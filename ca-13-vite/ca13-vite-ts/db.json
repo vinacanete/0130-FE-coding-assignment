@@ -1,0 +1,39 @@
+{
+  "book": [
+    {
+      "id": "1",
+      "title": "The Housemaid",
+      "author": "Freida McFadden",
+      "review": "Thrilling and captivating",
+      "rating": "4.5"
+    },
+    {
+      "id": "2",
+      "title": "Twisted Love",
+      "author": "Ana Huang",
+      "review": "Enemies to lovers, bestfriend's brother trope",
+      "rating": "2.5"
+    },
+    {
+      "id": "3",
+      "title": "The Things You Can See Only When You Slow Down",
+      "author": "Haemin Sunim",
+      "review": "Cozy read",
+      "rating": "4.0"
+    },
+    {
+      "id": "4",
+      "title": "Onyx Storm",
+      "author": "Rebecca Yarros",
+      "review": "Exciting, non-stop action",
+      "rating": "5.0"
+    },
+    {
+      "id": 5,
+      "title": "fourth wing",
+      "author": "rebecca yarros",
+      "review": "great",
+      "rating": "5.0"
+    }
+  ]
+}
