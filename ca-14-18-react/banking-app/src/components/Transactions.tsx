@@ -1,4 +1,7 @@
-export default function Transactions({ type, transactions }: { type: string, transactions: any[] }) {
+import type { Transaction } from "../views/App";
+
+export default function Transactions({ type, transactions }: { type: string, transactions: Transaction[] }) {
+
 	return (
 	<div className="d-flex flex-column">
 		<h2> {type.charAt(0).toUpperCase() + type.slice(1)} </h2>
@@ -21,14 +24,14 @@ export default function Transactions({ type, transactions }: { type: string, tra
 					</td>
 					{ type === "checking" && (
 						<td>
-							{transaction.category_name}
+							{transaction.category}
 						</td>
 					)}
 					<td>
 						{transaction.description}
 					</td>
 					<td>
-						{transaction.amount}
+						${transaction.amount}
 					</td>
 				</tr>)
 			)}
