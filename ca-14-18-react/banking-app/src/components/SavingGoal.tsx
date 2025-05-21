@@ -16,19 +16,25 @@ export default function SavingGoal({goals, setGoalList}: {
 		setGoalForm({
 			"id": id,
 			"name": goals.find(goal => goal.id === id)?.name || "",
-			"amount": goals.find(goal => goal.id === id)?.amount || 0,
-			"balance": goals.find(goal => goal.id === id)?.balance || 0,
-			"progress": goals.find(goal => goal.id === id)?.progress || 0
+			"amount": goals.find(goal => goal.id === id)?.amount || "",
+			"balance": goals.find(goal => goal.id === id)?.balance || "",
+			"progress": goals.find(goal => goal.id === id)?.progress || ""
 		});
 	};
 
 	const [goalForm, setGoalForm] = useState({
 		"id": "0", 
 		"name": "",
-		"amount": 0,
-		"balance": 0,
-		"progress": 0
+		"amount": "",
+		"balance": "",
+		"progress": ""
 	});
+
+	const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => 
+		setGoalForm({
+			...goalForm, 
+			[e.target.name]: e.target.value
+		})
 
 	const handleDelete = (idToDelete: string) => {
 		const newGoalList = goals.filter((goal) => goal.id !== idToDelete);
@@ -49,9 +55,9 @@ export default function SavingGoal({goals, setGoalList}: {
 		setGoalForm({
 			"id": "0", 
 			"name": "",
-			"amount": 0,
-			"balance": 0,
-			"progress": 0
+			"amount": "",
+			"balance": "",
+			"progress": ""
 		});
 		
 		if (id) {
@@ -97,7 +103,7 @@ export default function SavingGoal({goals, setGoalList}: {
 						{goal.progress}%
 					</td>
 					<td>
-					<button className="btn btn-outline-primary" onClick={() => handleShow(goal.id)}>Edit</button> 
+					<button className="btn btn-outline-primary mx-2" onClick={() => handleShow(goal.id)}>Edit</button> 
 					<button className="btn btn-danger" onClick= {() => handleDelete(goal.id)}>Delete</button>
 					</td>
 				</tr>)
@@ -111,13 +117,13 @@ export default function SavingGoal({goals, setGoalList}: {
 			<Form className="m-3" onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSave(e, editId)}>
 				<Form.Group controlId="formBasicEmail">
 					<Form.Label>Fund Name</Form.Label>
-					<Form.Control className="mb-3" type="text" placeholder="Enter fund name" value={goalForm.name} onChange={(e: ChangeEvent <HTMLInputElement>) => {setGoalForm({...goalForm, name: e.target.value})}}/>
+					<Form.Control className="mb-3" name="name" type="text" placeholder="Enter fund name" value={goalForm.name} onChange={handleInputChange}/>
 					<Form.Label>Goal Amount</Form.Label>
-					<Form.Control className="mb-3" type="number" placeholder="Enter amount" value={goalForm.amount} onChange={(e: ChangeEvent <HTMLInputElement>) => {setGoalForm({...goalForm, amount: Number(e.target.value)})}}/>
+					<Form.Control className="mb-3" name="amount" type="text" placeholder="Enter amount" value={goalForm.amount} onChange={handleInputChange}/>
 					<Form.Label>Balance</Form.Label>
-					<Form.Control className="mb-3" type="number" placeholder="Enter amount" value={goalForm.balance} onChange={(e: ChangeEvent <HTMLInputElement>) => {setGoalForm({...goalForm, balance: Number(e.target.value)})}}/>
+					<Form.Control className="mb-3" name="balance" type="text" placeholder="Enter amount" value={goalForm.balance} onChange={handleInputChange}/>
 					<Form.Label>Progress</Form.Label>
-					<Form.Control className="mb-3" type="number" placeholder="Enter amount" value={goalForm.progress} onChange={(e: ChangeEvent <HTMLInputElement>) => {setGoalForm({...goalForm, progress: Number(e.target.value)})}}/>
+					<Form.Control className="mb-3" name="progress" type="text" placeholder="Enter amount" value={goalForm.progress} onChange={handleInputChange}/>
 				</Form.Group>
 				<Button className="mb-3" variant="primary" type="submit">
 					Save
