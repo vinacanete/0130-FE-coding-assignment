@@ -1,13 +1,24 @@
 .active {
-  color: #008753;
+  color: #4C8B05;
   font-weight: bold;
 }
 
 a {
-  color: #49685c;
+  color: #233F02;
 }
 
 a:hover {
-  color: #079f65;
+  color: #427804;
   text-decoration: none;
+}
+
+#bank-bg {
+  background-color: #b5c7a1;
+}
+
+#footer {
+  background-color: #1a2f01;
+  color: #b5c7a1;
+  padding: 10px;
+  text-align: center;
 }
