@@ -12,151 +12,174 @@
         }
     ],
     "transactions": [
-        {"id": "1", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "1",
-         "category_name": "income",
-         "type": "credit",
-         "description": "Paycheck", 
-         "amount": 5000
+      {
+        "date": "2025-06-01",
+        "category": "income",
+        "type": "credit",
+        "description": "Paycheck 1",
+        "amount": "8,500.47",
+        "account": "checking",
+        "id": "1"
+      },
+      {
+        "date": "2025-05-31",
+        "category": "housing",
+        "type": "debit",
+        "description": "Mortgage Payment",
+        "amount": "2,336.25",
+        "account": "checking",
+        "id": "2"
+      },
+      {
+        "date": "2025-06-01",
+        "category": "transfer",
+        "type": "debit",
+        "description": "June Savings Transfer",
+        "amount": "500.00",
+        "account": "checking",
+        "id": "3"
+      },
+      {
+        "date": "2025-06-01",
+        "category": "transfer",
+        "type": "credit",
+        "description": "June Savings Transfer",
+        "amount": "500.00",
+        "account": "savings",
+        "id": "4"
+      },
+      {
+        "date": "2025-05-27",
+        "category": "utilities",
+        "type": "debit",
+        "description": "Electricity Bill",
+        "amount": "250.37",
+        "account": "checking",
+        "id": "5"
+      },
+      {
+        "date": "2025-05-26",
+        "category": "utilities",
+        "type": "debit",
+        "description": "Gas Bill",
+        "amount": "80.06",
+        "account": "checking",
+        "id": "6"
+      },
+      {
+        "date": "2025-05-26",
+        "category": "entertainment",
+        "type": "credit",
+        "description": "RETURN - Vacation Package",
+        "amount": "896.06",
+        "account": "checking",
+        "id": "7"
+      },
+      {
+        "date": "2025-05-25",
+        "category": "entertainment",
+        "type": "debit",
+        "description": "Disney+ Subscription",
+        "amount": "55.03",
+        "account": "checking",
+        "id": "8"
+      },
+      {
+        "date": "2025-05-31",
+        "category": "transfer",
+        "type": "debit",
+        "description": "May Savings Transfer",
+        "amount": "594.89",
+        "account": "savings",
+        "id": "9"
+      },
+      {
+        "date": "2025-05-24",
+        "category": "dining out",
+        "type": "debit",
+        "description": "Brunch with Friends",
+        "amount": "125.84",
+        "account": "checking",
+        "id": "10"
+      },
+      {
+        "date": "2025-04-12",
+        "category": "transfer",
+        "type": "debit",
+        "description": "April Savings Transfer",
+        "amount": "523.40",
+        "account": "savings",
+        "id": "11"
+      },
+      {
+        "date": "2025-05-23",
+        "category": "groceries",
+        "type": "debit",
+        "description": "Costco Shopping",
+        "amount": "383.54",
+        "account": "checking",
+        "id": "12"
+      },
+      {
+        "date": "2025-05-15",
+        "category": "income",
+        "type": "credit",
+        "description": "Paycheck 2",
+        "amount": "438.54",
+        "account": "checking",
+        "id": "13"
+      },
+      {
+        "date": "2025-05-10",
+        "category": "transportation",
+        "type": "debit",
+        "description": "Monthly Public Transport Pass",
+        "amount": "352.54",
+        "account": "checking",
+        "id": "14"
+      },
+      {
+        "date": "2025-05-02",
+        "category": "transportation",
+        "type": "debit",
+        "description": "Building Monthly Parking Fee",
+        "amount": "460.23",
+        "account": "checking",
+        "id": "15"
+      },
+      {
+        "date": "2025-06-02",
+        "category": "Income",
+        "type": "debit",
+        "description": "test",
+        "amount": "3000",
+        "account": "account 16",
+        "id": "16"
+      }
+    ],
+    "goals": [
+        {
+          "name": "Pet Fund",
+          "amount": "5,000.00",
+          "balance": "500.00",
+          "progress": "10",
+          "id": "1"
         },
-        {"id": "2", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "2",
-         "category_name": "housing",
-         "type": "debit",
-         "description": "House mortgage payment", 
-         "amount": 1500
+        {
+          "name": "New Car",
+          "amount": "50,000.00",
+          "balance": "5,000.00",
+          "progress": "10",
+          "id": "2"
         },
-        {"id": "3", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "1",
-         "category_name": "income",
-         "type": "credit",
-         "description": "Side job", 
-         "amount": 3000
-        },
-        {"id": "4", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "8",
-         "category_name": "transfer",
-         "type": "debit",
-         "description": "April Savings", 
-         "amount": 100
-        },
-        {"id": "5", 
-         "account_id": "2",
-         "account_type": "savings",
-         "category_id": "8",
-         "category_name": "transfer",
-         "type": "credit",
-         "description": "April Savings", 
-         "amount": 100
-        },
-        {"id": "6", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "4",
-         "category_name": "groceries",
-         "type": "debit",
-         "description": "Aldi", 
-         "amount": 200
-        },
-        {"id": "7", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "5",
-         "category_name": "transportation",
-         "type": "debit",
-         "description": "Parking", 
-         "amount": 20
-        },
-        {"id": "8", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "3",
-         "category_name": "utilities",
-         "type": "debit",
-         "description": "Electricity", 
-         "amount": 100
-        },
-        {"id": "9", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "3",
-         "category_name": "utilities",
-         "type": "debit",
-         "description": "Water", 
-         "amount": 50
-        },
-        {"id": "10", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "7",
-         "category_name": "entertainment",
-         "type": "debit",
-         "description": "Internet", 
-         "amount": 90
-        },
-        {"id": "11", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "5",
-         "category_name": "transportation",
-         "type": "debit",
-         "description": "Gas", 
-         "amount": 60
-        },
-        {"id": "12", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "7",
-         "category_name": "entertainment",
-         "type": "debit",
-         "description": "Subscriptions", 
-         "amount": 200
-        },
-        {"id": "13", 
-         "account_id": "1",
-         "account_type": "checking",
-         "category_id": "6",
-         "category_name": "dining out",
-         "type": "debit",
-         "description": "Red Lobster", 
-         "amount": 120
+        {
+          "name": "Shopping",
+          "amount": "3,000",
+          "balance": "300",
+          "progress": "10",
+          "id": "3"
         }
-    ],
-    "categories": [
-        {"id": "1", 
-         "name": "income"
-        },
-        {"id": "2", 
-         "name": "housing"
-        },
-        {"id": "3", 
-         "name": "utilities"
-        },
-        {"id": "4", 
-         "name": "groceries"
-        },
-        {"id": "5", 
-         "name": "transportation"
-        },
-        {"id": "6", 
-         "name": "dining out"
-        },
-        {"id": "7", 
-         "name": "entertainment"
-        },
-        {"id": "8", 
-        "name": "transfer"
-       }
-
-    ],
+      ],
     "user": {
         "id":"1",
         "name": "Daisy Germain"

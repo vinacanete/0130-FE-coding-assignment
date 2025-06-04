@@ -1,49 +1,50 @@
 import { useState, type ChangeEvent } from "react";
 import { Button } from "react-bootstrap";
-import type { Transaction } from "../views/App";
 
-export default function TransactionForm({transactions, setters}: {
-	//array with arrays of transactions (checking and savings)
-	transactions: Transaction[][], 
-	setters: any[]}
-) {
+export default function TransactionForm({fetchTransactions}: {fetchTransactions: () => void}) {
 	const [form, setForm] = useState({
 		type: "debit",
-		account: "1",
+		account: "checking",
 		description: "",
 		category: "",
-		amount: ""
+		amount: "",
 	});
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		let getter = transactions[0];
-		let setter = setters[0];
-
-		if (form.account === "2") {
-			getter = transactions[1];
-			setter = setters[1];
-		}
-
 		const newTransaction = {
-			id: getter.length + 1,
-			// the .toISOString() method converts a date to a string in the ISO format (YYYY-MM-DDTHH:mm:ss.sssZ) and we use split("T") to get the date part only
 			date: new Date().toISOString().split("T")[0],
 			type: form.type,
+			account: form.account,
 			description: form.description,
 			category: form.category,
 			amount: form.amount
 		};
+		  
+		fetch('https://683ba7d328a0b0f2fdc51fbe.mockapi.io/transactions', {
+		method: 'POST',
+		headers: {'content-type':'application/json'},
+		// Send your data in the request body as JSON
+		body: JSON.stringify(newTransaction)
+		}).then(res => {
+		if (res.ok) {
+			fetchTransactions();
+			return res.json();
+		}
+		// handle error
+		}).catch(error => {
+			throw new Error("Error creating transaction: " + error.message);
+		})
+
 		setForm({
 			type: "debit",
-			account: "1",
+			account: "checking",
 			description: "",
 			category: "",
 			amount: ""
 		});
-		
-		setter([...getter, newTransaction]);
+
 	}
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement >) => 
@@ -71,8 +72,8 @@ export default function TransactionForm({transactions, setters}: {
 			<div className="mb-3">
 				<label htmlFor="account" className="form-label">Account</label>
 				<select className="form-select" name="account" value={form.account} onChange={handleInputChange}>
-					<option value="1">Checking</option>
-					<option value="2">Savings</option>
+					<option value="checking">Checking</option>
+					<option value="savings">Savings</option>
 				</select>
 			</div>
 			<div className="mb-3">
